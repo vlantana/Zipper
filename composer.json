@@ -1,9 +1,9 @@
 {
-    "name": "chumper/zipper",
+    "name": "wrklst/zipper",
     "type": "library",
     "description": "This is a little neat helper for the ZipArchive methods with handy functions",
     "keywords": ["laravel", "ZIP", "Archive"],
-    "homepage": "http://github.com/Chumper/zipper",
+    "homepage": "http://github.com/wrklst/zipper",
     "license": "Apache2",
     "authors": [
         {
@@ -11,13 +11,17 @@
             "email": "github@nilsplaschke.de",
             "homepage": "http://nilsplaschke.de",
             "role": "Developer"
+        },
+        {
+            "name": "Tobias Vielmetter-Diekmann",
+            "email": "tobias@wrklst.art",
+            "homepage": "https://artworldsolutions.com",
+            "role": "Maintainer"
         }
     ],
     "require": {
         "php": ">=5.6.0",
-        "ext-zip": "*",
-        "illuminate/support": "^5.0",
-        "illuminate/filesystem": "^5.0"
+        "ext-zip": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
@@ -25,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Chumper\\Zipper\\": "src/Chumper/Zipper"
+            "Wrklst\\Zipper\\": "src/Wrklst/Zipper"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Chumper\\Zipper\\": "tests/"
+            "Wrklst\\Zipper\\": "tests/"
         }
     },
     "config": {
@@ -39,10 +43,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Chumper\\Zipper\\ZipperServiceProvider"
+                "Wrklst\\Zipper\\ZipperServiceProvider"
             ],
             "aliases": {
-                "Zipper": "Chumper\\Zipper\\Zipper"
+                "Zipper": "Wrklst\\Zipper\\Zipper"
             }
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace Chumper\Zipper\Repositories;
+namespace Wrklst\Zipper\Repositories;
 
 use Exception;
 use Mockery;
