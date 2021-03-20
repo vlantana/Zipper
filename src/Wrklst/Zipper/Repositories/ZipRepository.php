@@ -115,8 +115,8 @@ class ZipRepository implements RepositoryInterface
                 continue;
             }
             call_user_func_array($callback, [
-                'file' => $this->archive->getNameIndex($i),
-                'stats' => $this->archive->statIndex($i)
+                $this->archive->getNameIndex($i),
+                $this->archive->statIndex($i)
             ]);
         }
     }
@@ -161,7 +161,9 @@ class ZipRepository implements RepositoryInterface
      */
     public function close()
     {
-        @$this->archive->close();
+        try {
+            $this->archive->close();
+        } catch (\ValueError) {}
     }
 
     private function getErrorMessage($resultCode)
